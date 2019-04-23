@@ -52,13 +52,14 @@ All variables previously defined above are clearly labeled, for example, $key_gh
 
 ```
 
-#Names for arguments
-Argument names are clearly defined, for example, a produced error message "Missing argument: config file" is aptly named "die_with_message" which helps users understand the purpose of this line of code. Additionally, 
+### Names for arguments
+Argument names are clearly defined, for example, a produced error message "Missing argument: config file" is aptly named "die_with_message" which helps users understand the purpose of this line of code.
+
 ```perl
 my $json_config = $ARGV[0] or die_with_message("Missing argument: config file");
 ```
 
-#Project Structure
+### Project Structure
 again, project structure is well organized with a header, and subheaders defining the different types of datasets. Also, analysis tables are well commented and it is very clear what each table describes. However, it would be nice to have a little more commenting and description of what each dataset is. For example, is $bq_tb_commits the number of commits per user? or per project? 
 
 ```perl
@@ -104,7 +105,7 @@ if($extract_repos_from_lit_search) {
 } else {print("\nSkipping step: extract repo names from literature search\n")}
 ...(cont'd)
 ```
-###Subroutines
+### Subroutines
 This subroutine code is helpful in keeping directories clean, especially if a command is run multiple times, by deleting previous versions of files. It is also offered as an option rather than embedded into the program, which is ideal because there may be instances where previous output needs to be retained.
 
 ```perl 
